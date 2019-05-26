@@ -1,6 +1,6 @@
 FROM composer:latest
 
-RUN apk add --no-cache --virtual .php-extensions php7-pecl-mcrypt libjpeg-turbo libpng freetype \
+RUN apk add --no-cache --virtual .php-extensions libmcrypt php7-pecl-mcrypt libjpeg-turbo libpng freetype \
   && apk add --no-cache --virtual .build-deps autoconf libjpeg-turbo-dev libpng-dev freetype-dev \
   && docker-php-ext-configure gd \
     --with-gd \
