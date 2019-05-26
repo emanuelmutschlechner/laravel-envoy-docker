@@ -4,6 +4,5 @@ RUN apk add --no-cache --virtual .php-extensions libmcrypt-dev libjpeg-dev libpn
   && pecl install mcrypt-1.0.2 \
   && docker-php-ext-enable mcrypt \
   && docker-php-ext-install -j$(nproc) pdo_mysql \
-  && apk del .php-extensions \
   && composer global require "laravel/envoy=~1.0"
   
